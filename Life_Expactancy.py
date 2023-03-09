@@ -279,10 +279,10 @@ selection = st.slider("Select an average score", 35, 100, (60, 90), step=1)
 
 df_selection = df2[(df2['Average score'] >= selection[0]) & (df2['Average score'] <= selection[1])]
 
-st.header('Slider')
+st.header('Average score vs Parental level of education')
 x_values = df_selection['Parental level of education']
 y_values = df_selection['Average score']
-plot6 = px.scatter(data_frame=df2, x=x_values, y=y_values, marginal_x="histogram", labels={'x':'Parental leval of education', 'y':'Average score'})
+plot6 = px.scatter(data_frame=df2, x=x_values, y=y_values, marginal_x="histogram", labels={'x':'Parental level of education', 'y':'Average score'})
 st.plotly_chart(plot6)
 
 #st.write('**De verschillende scores door de studenten behaald:**')
