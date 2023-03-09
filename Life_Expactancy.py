@@ -273,7 +273,7 @@ df3 = df[['Math score', 'Reading score', 'Writing score']].mean(axis =1).round(0
 df2.loc[:, 'Average score'] = list(df3)
 
 
-selection = st.slider("Select an average score", 35, 100, (60, 90), step=1)
+selection = st.slider("Select een gemiddelde score", 35, 100, (60, 90), step=1)
 
 # In[ ]:
 
