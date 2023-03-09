@@ -47,6 +47,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from PIL import Image
+import statsmodels.api as sm
 
 # # Student performance prediction for beginner DATASET
 
