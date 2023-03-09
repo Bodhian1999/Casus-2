@@ -269,6 +269,22 @@ st.header('Data analyse')
 
 # In[ ]:
 
+df3 = df[['Math score', 'Reading score', 'Writing score']].mean(axis =1).round(0)
+df2.loc[:, 'Average score'] = list(df3)
+
+
+selection = st.slider("Select an average score", 35, 100, (60, 90), step=1)
+
+# In[ ]:
+
+df_selection = df2[(df2['Average score'] >= selection[0]) & (df2['Average score'] <= selection[1])]
+
+st.header('Slider')
+x_values = df_selection['Parental level of education']
+y_values = df_selection['Average score']
+plot6 = px.scatter(data_frame=df2, x=x_values, y=y_values, marginal_x="histogram", labels={'x':'Parental leval of education', 'y':'Average score'})
+st.plotly_chart(plot6)
+
 #st.write('**De verschillende scores door de studenten behaald:**')
 
 #TrendlineButtons = st.radio('Met of zonder trendline:', ('Zonder trendline', 'Met trendline'))
