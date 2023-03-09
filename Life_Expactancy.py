@@ -360,7 +360,7 @@ fig_6 = px.histogram(df, x ='Average score', color='Test preparation course')
 # In[ ]:
 
 
-option_2 = st.selectbox("CGemiddelde testscores vergelijken met verschillende persoonlijke factoren", 
+option_2 = st.selectbox("Gemiddelde testscores vergelijken met verschillende persoonlijke factoren", 
                         ["Gemiddelde score door Gender","Gemiddelde score door Lunch","Gemiddelde score door Test Preperation"])
 
 if "Gemiddelde score door Gender" in option_2: 
