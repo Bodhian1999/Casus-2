@@ -274,13 +274,13 @@ st.write('**De verschillende scores door de studenten behaald:**')
 TrendlineButtons = st.radio('Met of zonder trendline:', ('Zonder trendline', 'Met trendline'))
 
 figuur1 = px.scatter(df2, x=['Math score', 'Reading score','Writing score'], y='Student ID')
+figuur2 = px.scatter(df2, x=['Math score', 'Reading score','Writing score'], y='Student ID', trendline='ols')
 
 if TrendlineButtons == 'Zonder trendline':
     st.plotly_chart(figuur1)
 
 if TrendlineButtons == 'Met trendline':
-    figuur1 = px.scatter(df2, x=['Math score', 'Reading score','Writing score'], y='Student ID', trendline='ols')
-    st.plotly_chart(figuur1)
+    st.plotly_chart(figuur2)
 
 
 
