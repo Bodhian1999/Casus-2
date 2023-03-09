@@ -47,7 +47,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from PIL import Image
-import statsmodels.api as sm
 
 # # Student performance prediction for beginner DATASET
 
@@ -270,18 +269,18 @@ st.header('Data analyse')
 
 # In[ ]:
 
-st.write('**De verschillende scores door de studenten behaald:**')
+#st.write('**De verschillende scores door de studenten behaald:**')
 
-TrendlineButtons = st.radio('Met of zonder trendline:', ('Zonder trendline', 'Met trendline'))
+#TrendlineButtons = st.radio('Met of zonder trendline:', ('Zonder trendline', 'Met trendline'))
 
-figuur1 = px.scatter(df2, x=['Math score', 'Reading score','Writing score'], y='Student ID')
+#figuur1 = px.scatter(df2, x=['Math score', 'Reading score','Writing score'], y='Student ID')
 
-if TrendlineButtons == 'Zonder trendline':
-    st.plotly_chart(figuur1)
+#if TrendlineButtons == 'Zonder trendline':
+#    st.plotly_chart(figuur1)
 
-if TrendlineButtons == 'Met trendline':
-    figuur1 = px.scatter(df2, x=['Math score', 'Reading score','Writing score'], y='Student ID', trendline='ols')
-    st.plotly_chart(figuur1)
+#if TrendlineButtons == 'Met trendline':
+#    figuur1 = px.scatter(df2, x=['Math score', 'Reading score','Writing score'], y='Student ID', trendline='ols')
+#    st.plotly_chart(figuur1)
 
 
 
