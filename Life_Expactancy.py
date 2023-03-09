@@ -73,7 +73,6 @@ df = pd.read_csv("Student performance in mathematics.csv")
 
 # In[45]:
 
-
 HeaderImage = Image.open('Header.png')
 st.image(HeaderImage, width=290)
 
@@ -287,18 +286,7 @@ if TrendlineButtons == 'Met trendline':
 
 # In[ ]:
 
-st.header('Voorspellende modellen')
-
-st.markdown('')
-
 df['Average score'] = ((df['Math score'] + df['Reading score'] + df['Writing score']) / 3).round(1)
-
-
-# In[ ]:
-
-
-
-
 
 # In[96]:
 
@@ -321,13 +309,13 @@ fig_3 = px.scatter(df,  x='Writing score', y='Math score' ,color = 'Race/ethnici
 # In[102]:
 
 
-st.title("Student test scores per subject")
+st.title("Studenten scores")
 
 
 # In[103]:
 
 
-st.text("This analysis will show us the correlations between all the different subjects and their results")
+st.text("Dit laat de scores zien in relatie tot de verschillende variabelen")
 
 
 # In[104]:
@@ -341,13 +329,13 @@ st.text("This analysis will show us the correlations between all the different s
 # In[105]:
 
 
-option = st.selectbox("Which Graph would you like to view?", ["Writing vs Reading","Math vs Reading","Writing vs Math"])
+option = st.selectbox("Welke grafiek wil je bekijken?", ["Schrijven vs Lezen","Wiskunde vs Lezen","Schrijven vs Wiskunde"])
 
-if "Writing vs Reading" in option: 
+if "Schrijven vs Lezen" in option: 
     writing_reading = st.plotly_chart(fig_1)
-elif "Math vs Reading" in option:
+elif "Wiskunde vs Lezen" in option:
     math_reading = st.plotly_chart(fig_2)
-elif "Writing vs Math" in option:
+elif "Schrijven vs Wiskunde" in option:
     writing_math = st.plotly_chart(fig_3)
 
 
@@ -372,12 +360,12 @@ fig_6 = px.histogram(df, x ='Average score', color='Test preparation course')
 # In[ ]:
 
 
-option_2 = st.selectbox("Comparing Average test scores to different personal factors", 
-                        ["Average score by Gender","Average score by Lunch","Average score by Test Preperation"])
+option_2 = st.selectbox("CGemiddelde testscores vergelijken met verschillende persoonlijke factoren", 
+                        ["Gemiddelde score door Gender","Gemiddelde score door Lunch","Gemiddelde score door Test Preperation"])
 
-if "Average score by Gender" in option_2: 
+if "Gemiddelde score door Gender" in option_2: 
     writing_reading = st.plotly_chart(fig_4)
-elif "Average score by Lunch" in option_2:
+elif "Gemiddelde score door Lunch" in option_2:
     math_reading = st.plotly_chart(fig_5)
-elif "Average score by Test Preperation" in option_2:
+elif "Gemiddelde score door Test Preperation" in option_2:
     writing_math = st.plotly_chart(fig_6)
