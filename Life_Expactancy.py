@@ -279,7 +279,7 @@ if TrendlineButtons == 'Zonder trendline':
     st.plotly_chart(figuur1)
 
 if TrendlineButtons == 'Met trendline':
-   figuur1 = px.scatter(df2, x=['Math score', 'Reading score','Writing score'], y='Student ID', trendline='ols')
+figuur1 = px.scatter(df2, x=['Math score', 'Reading score','Writing score'], y='Student ID', trendline='ols')
     st.plotly_chart(figuur1)
 
 
